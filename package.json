@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha || true "
+    "test": "mocha || true ",
+    "client": "npm start --prefix frontend",
+    "dev" : "concurrently \"nodemon server.js\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +24,7 @@
   "devDependencies": {
     "@types/node": "^18.11.0",
     "chai": "^4.3.6",
+    "concurrently": "^7.5.0",
     "mocha": "^10.1.0"
   }
 }

@@ -1,7 +1,7 @@
 import express from 'express';
-import userRoute from './routes/Users_routes.js'
-import materialRoute from './routes/Materials_routes.js'
-import indexRoute from './routes/index.js'
+import userRoute from './backend/routes/Users_routes.js'
+import materialRoute from './backend/routes/Materials_routes.js'
+import indexRoute from './backend/routes/index.js'
 
 import mongoose from "mongoose";
 import dotenv from 'dotenv';
@@ -18,8 +18,8 @@ app.use('/tasks', userRoute);
 app.use('/tasks', materialRoute);
 app.use('/',indexRoute);
 
-// API server listing port 3000
-app.listen(3000, function () {
+// API server listing port 3001
+app.listen(3001, function () {
   console.log('API running');
 });
 export default app;
